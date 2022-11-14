@@ -3,5 +3,6 @@
 DIR=./zdata/
 DEV=/dev/ttyUSB0
 
+cd $DIR
 stty -F $DEV 115200
 rz -b > $DEV < $DEV
