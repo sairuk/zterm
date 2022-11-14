@@ -1,7 +1,7 @@
 #!/bin/bash
 #https://superuser.com/questions/604055/using-rz-and-sz-under-linux-shell
-FILE=./zdata/$1
+DIR=./zdata/
 DEV=/dev/ttyUSB0
 
 stty -F $DEV 115200
-rz -b $FILE > $DEV < $DEV
+rz -b > $DEV < $DEV
