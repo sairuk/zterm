@@ -4,4 +4,4 @@ FILE=./zdata/$1
 DEV=/dev/ttyUSB0
 
 stty -F $DEV 115200
-sz $FILE > $DEV < $DEV
+sz -b $FILE > $DEV < $DEV

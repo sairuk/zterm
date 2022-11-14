@@ -1,8 +1,8 @@
 #!/bin/bash
-DIR=${1:-./zdata}
+DIR=./zdata
 DEV=/dev/ttyUSB0
 
 stty -F $DEV 115200
 #echo -e '\r\n' > $DEV
-ls -1 $DIR | sed -z 's/\n/\r\n/g' > $DEV
+ls -1 "$DIR/$1" | sed -z 's/\n/\r\n/g' > $DEV
 #echo -e '\r\n' > $DEV
