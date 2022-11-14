@@ -1,5 +1,5 @@
 #!/bin/bash
-DIR=./zdata
+DIR=${1:-./zdata}
 DEV=/dev/ttyUSB0
 
 stty -F $DEV 115200

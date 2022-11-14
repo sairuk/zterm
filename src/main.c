@@ -135,6 +135,24 @@ static const char * exec_command(unsigned char * rxBuffer, unsigned int rxLen)
       return (const char *)&rxBuffer[-2]; //system call desired!
    }
 
+   //zrecv command
+   if ((rxLen >= 7) && (strncmp(rxBuffer, "zrecv ", 6) == 0))
+   {
+      //add a prefix (must not me more than RX_BUFFER_HEADER)
+      rxBuffer[-2] = '.';
+      rxBuffer[-1] = '/'; //command shall be ./zrecv ...
+      return (const char *)&rxBuffer[-2]; //system call desired!
+   }
+
+   //zcd command
+   if ((rxLen >= 4) && (strncmp(rxBuffer, "zcd ", 3) == 0))
+   {
+      //add a prefix (must not me more than RX_BUFFER_HEADER)
+      rxBuffer[-2] = '.';
+      rxBuffer[-1] = '/'; //command shall be ./zcd ...
+      return (const char *)&rxBuffer[-2]; //system call desired!
+   }
+
    //other commands
    //todo
 

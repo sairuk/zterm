@@ -1,0 +1,3 @@
+#!/bin/bash
+#https://superuser.com/questions/604055/using-rz-and-sz-under-linux-shell
+./zdir $1
