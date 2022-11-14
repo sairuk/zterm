@@ -2,5 +2,5 @@
 #https://superuser.com/questions/604055/using-rz-and-sz-under-linux-shell
 source zconfig
 
-stty -F $DEV $SPEED
+stty -F $DEV $SPEED $ADDN
 sz -b $DIR/$1 > $DEV < $DEV

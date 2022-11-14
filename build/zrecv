@@ -3,5 +3,5 @@
 source zconfig
 
 cd $DIR
-stty -F $DEV $SPEED
+stty -F $DEV $SPEED $ADDN
 rz -b > $DEV < $DEV

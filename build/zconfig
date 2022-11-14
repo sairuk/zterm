@@ -1,3 +1,5 @@
 DIR=./zdata
 DEV=/dev/ttyUSB0
 SPEED=115200
+#ADDN=cs8 -cstopb -parenb
+ADDN=
