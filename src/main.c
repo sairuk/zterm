@@ -65,8 +65,7 @@ int main(int argc, const char * argv[])
 
       //send greetings
       static const char * const greetings = "\r\nminlux zterm\r\n" \
-                                            "Type \"zdir\" + ENTER to get list of available files\r\n" \
-                                            "Type \"zcd <dir>\" + ENTER to change the base dir for zdir\r\n" \
+                                            "Type \"zdir [+DIR]\" + ENTER to get list of available files\r\n" \
                                             "Type \"zsend <file>\" + ENTER to request reception of a file\r\n" \
                                             "Type \"zrecv\" + ENTER to start listening for a file\r\n" \
                                             "Type \"CLIENT\" to quit the server\r\n";
