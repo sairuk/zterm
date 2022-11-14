@@ -1,8 +1,7 @@
 #!/bin/bash
-DIR=./zdata
-DEV=/dev/ttyUSB0
+source zconfig
 
-stty -F $DEV 115200
+stty -F $DEV $SPEED
 #echo -e '\r\n' > $DEV
 ls -1 "$DIR/$1" | sed -z 's/\n/\r\n/g' > $DEV
 #echo -e '\r\n' > $DEV

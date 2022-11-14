@@ -1,7 +1,6 @@
 #!/bin/bash
 #https://superuser.com/questions/604055/using-rz-and-sz-under-linux-shell
-FILE=./zdata/$1
-DEV=/dev/ttyUSB0
+source zconfig
 
-stty -F $DEV 115200
-sz -b $FILE > $DEV < $DEV
+stty -F $DEV $SPEED
+sz -b $DIR/$1 > $DEV < $DEV
